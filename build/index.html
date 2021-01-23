@@ -9,9 +9,41 @@
     <title>Middleman</title>
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <script src="/javascripts/site.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello Batard</h1>
+    <div class="min-height-100vh line-height-1px">
+  <div class="bg-light-grey height-100px text-center pt-4 position-relative">
+    <p class="text-18px mb-0">Factures fournisseurs pour <strong class="text-22px">SAS ATELIER DES LIEUX</strong></p>
+    <img src="images/logoetoile.svg" alt="logo-etoile" class="position-absolute bottom--18px">
+  </div>
+  <div class="row justify-content-between px-5 mt-5">
+    <div class="col-12 col-md-7">
+      <h4 class="my-5 ml-5">CIKLEA-PARIS</h4>
+      <div>
+        <div class="d-flex">
+          <p class="mr-2">A payer</p>
+          <p>Payé</p>
+        </div>
+        <hr class="w-100 color-black">
+        <div id="billsArea">
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="min-height-240px width-300px border-radius-5px card-shadow card-border px-3 d-flex flex-column align-items-start justify-content-center">
+        <p><strong>Récapitulatif</strong></p>
+        <p class="text-light-grey">Fac1510</p>
+        <hr class="w-100 color-light-grey">
+        <div class="d-flex justify-content-between w-100">
+          <p>Total</p>
+          <p>776e00</p>
+        </div>
+        <p class="mb-0 cursor-pointer text-white align-self-center bg-blue-electric border-radius-25px px-4 py-2">Payer par virement</p>
+      </div>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>

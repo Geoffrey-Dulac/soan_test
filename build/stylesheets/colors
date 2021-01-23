@@ -1,0 +1,5 @@
+.color-light-grey {
+  color: #f1f0f1; }
+
+.color-black {
+  color: black; }

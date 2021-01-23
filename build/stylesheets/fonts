@@ -1,0 +1,20 @@
+.text-blue {
+  color: #1476ff; }
+
+.text-light-grey {
+  color: #bcbcbc; }
+
+.text-orange {
+  color: #fb9b66; }
+
+.text-white {
+  color: white; }
+
+.text-10px {
+  font-size: 10px; }
+
+.text-18px {
+  font-size: 18px; }
+
+.text-22px {
+  font-size: 22px; }

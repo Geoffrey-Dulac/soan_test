@@ -1,0 +1,32 @@
+.bg-light-grey {
+  background-color: #f1f0f1; }
+
+.bg-blue-electric {
+  background-color: #1476ff; }
+
+.border-radius-5px {
+  border-radius: 5px; }
+
+.border-radius-25px {
+  border-radius: 25px; }
+
+.bottom--18px {
+  bottom: -18px; }
+
+.card-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); }
+
+.card-border {
+  border: 0.3px solid #f1f0f1; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.flex-grow-1 {
+  flex-grow: 1; }
+
+.line-height-1px {
+  line-height: 1; }
+
+.line-throught {
+  text-decoration: line-through; }
