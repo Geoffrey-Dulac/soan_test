@@ -1,5 +1,5 @@
-.bg-black-opacity {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+.bg-light-blue {
+  background-color:  rgb(217, 235, 255);
 }
 
 .bg-light-grey {
@@ -28,6 +28,10 @@
 
 .border-0px {
   border: 0;
+}
+
+.border-light-grey {
+  border: 1px solid rgb(241, 240, 241);
 }
 
 .bottom--18px {
@@ -60,4 +64,10 @@
 
 .outline-none {
   outline: none;
+}
+
+.text-decoration-none-hover {
+  &:hover {
+    text-decoration: none; 
+  }
 }
