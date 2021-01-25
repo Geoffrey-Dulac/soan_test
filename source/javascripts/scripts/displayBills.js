@@ -1,21 +1,24 @@
 const displayBills = (allBills) => {
+  let billsToPayToInject = "";
+  let billsPayedToInject = "";
+
   const formatK = (number) => {
     let num = number.toString();
     return num.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
   }
-  let billsToPayToInject = "";
-  let billsPayedToInject = "";
-  allBills.forEach((bill) => {
-    if (bill.discount.isDiscountable === "1" && bill.payedDate === null) {
+  
+  allBills.forEach(({ discount: {isDiscountable, discountRate}, payedDate, invoiceNumber, dueDate, amount }) => {
+    if (isDiscountable === "1" && payedDate === null) {
       billsToPayToInject += `
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between mb-5">
+          <input type="checkbox" class="my-auto mr-4 billCheckbox">
           <div>
-            <p class="mb-1"><strong>${bill.invoiceNumber}</strong></p>
-            <p class="italic text-10px">A payer avant le ${bill.dueDate}</p>
+            <p class="mb-1 invoiceNumber"><strong>${invoiceNumber}</strong></p>
+            <p class="italic text-10px">A payer avant le ${dueDate}</p>
           </div>
           <div class="flex-grow-1 text-right pr-3">
-            <p class="mb-2 line-throught">${formatK(bill.amount)} €</p>
-            <p class="mb-1 text-blue"><strong>${formatK(bill.amount * (1 - (bill.discount.discountRate * 0.01))) } €</strong></p>
+            <p class="mb-2 line-throught">${formatK(amount)} €</p>
+            <p class="mb-1 text-blue"><strong>${formatK(amount * (1 - (discountRate * 0.01))) } €</strong></p>
             <div class="d-flex justify-content-end">
               <img src="images/escompte.svg" alt="escompte">
               <p class="mb-0 italic text-10px text-orange">5% d'escompte jursqu'au 17/06/2021</p>
@@ -27,15 +30,16 @@ const displayBills = (allBills) => {
           </div>
         </div>
       `
-    } else if (bill.discount.isDiscountable === "0" && bill.payedDate === null) {
+    } else if (isDiscountable === "0" && payedDate === null) {
       billsToPayToInject += `
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between mb-5">
+          <input type="checkbox" class="my-auto mr-4 billCheckbox">
           <div>
-            <p class="mb-1"><strong>${bill.invoiceNumber}</strong></p>
-            <p class="italic text-10px">A payer avant le ${bill.dueDate}</p>
+            <p class="mb-1 invoiceNumber"><strong>${invoiceNumber}</strong></p>
+            <p class="italic text-10px">A payer avant le ${dueDate}</p>
           </div>
           <div class="flex-grow-1 text-right pr-3">
-            <p class="mb-1 text-blue"><strong>${formatK(bill.amount)} €</strong></p>
+            <p class="mb-1 text-blue"><strong>${formatK(amount)} €</strong></p>
             <div class="d-flex justify-content-end">
               <img src="images/escompte.svg" alt="escompte">
               <p class="mb-0 italic text-10px text-orange">5% d'escompte jursqu'au 17/06/2021</p>
@@ -47,16 +51,16 @@ const displayBills = (allBills) => {
           </div>
         </div>
       `
-    } else if (bill.discount.isDiscountable === "1" && bill.payedDate !== null) {
+    } else if (isDiscountable === "1" && payedDate !== null) {
       billsPayedToInject += `
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between mb-5">
           <div>
-            <p class="mb-1"><strong>${bill.invoiceNumber}</strong></p>
-            <p class="italic text-10px">A payer avant le ${bill.dueDate}</p>
+            <p class="mb-1 invoiceNumber"><strong>${invoiceNumber}</strong></p>
+            <p class="italic text-10px">A payer avant le ${dueDate}</p>
           </div>
           <div class="flex-grow-1 text-right pr-3">
-            <p class="mb-2 line-throught">${formatK(bill.amount)} €</p>
-            <p class="mb-1 text-blue"><strong>${formatK(bill.amount * (1 - (bill.discount.discountRate * 0.01))) } €</strong></p>
+            <p class="mb-2 line-throught">${formatK(amount)} €</p>
+            <p class="mb-1 text-blue"><strong>${formatK(amount * (1 - (discountRate * 0.01))) } €</strong></p>
             <div class="d-flex justify-content-end">
               <img src="images/escompte.svg" alt="escompte">
               <p class="mb-0 italic text-10px text-orange">5% d'escompte jursqu'au 17/06/2021</p>
@@ -68,15 +72,15 @@ const displayBills = (allBills) => {
           </div>
         </div>
       `
-    } else if (bill.discount.isDiscountable === "0" && bill.payedDate !== null) {
+    } else if (isDiscountable === "0" && payedDate !== null) {
       billsPayedToInject += `
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between mb-5">
           <div>
-            <p class="mb-1"><strong>${bill.invoiceNumber}</strong></p>
-            <p class="italic text-10px">A payer avant le ${bill.dueDate}</p>
+            <p class="mb-1 invoiceNumber"><strong>${invoiceNumber}</strong></p>
+            <p class="italic text-10px">A payer avant le ${dueDate}</p>
           </div>
           <div class="flex-grow-1 text-right pr-3">
-            <p class="mb-1 text-blue"><strong>${formatK(bill.amount)} €</strong></p>
+            <p class="mb-1 text-blue"><strong>${formatK(amount)} €</strong></p>
             <div class="d-flex justify-content-end">
               <img src="images/escompte.svg" alt="escompte">
               <p class="mb-0 italic text-10px text-orange">5% d'escompte jursqu'au 17/06/2021</p>
