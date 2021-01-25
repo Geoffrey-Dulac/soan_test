@@ -59,8 +59,8 @@
 .max-width-100px {
   width: 100px; }
 
-.width-300px {
-  width: 300px; }
+.max-width-300px {
+  max-width: 300px; }
 
 .text-blue {
   color: #1476ff; }
