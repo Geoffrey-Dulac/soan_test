@@ -1,5 +1,5 @@
-.bg-black-opacity {
-  background-color: rgba(0, 0, 0, 0.1) !important; }
+.bg-light-blue {
+  background-color: #d9ebff; }
 
 .bg-light-grey {
   background-color: #f1f0f1; }
@@ -21,6 +21,9 @@
 
 .border-0px {
   border: 0; }
+
+.border-light-grey {
+  border: 1px solid #f1f0f1; }
 
 .bottom--18px {
   bottom: -18px; }
@@ -47,6 +50,12 @@
 .outline-none {
   outline: none; }
 
+.text-decoration-none-hover:hover {
+  text-decoration: none; }
+
+.height-40px {
+  height: 40px; }
+
 .height-100px {
   height: 100px; }
 
@@ -56,11 +65,22 @@
 .min-height-240px {
   min-height: 240px; }
 
+.min-height-400px {
+  min-height: 400px; }
+
 .max-width-100px {
   width: 100px; }
 
 .max-width-300px {
   max-width: 300px; }
+
+@media (min-width: 768px) {
+  .w-100-md-300px {
+    width: 300px; } }
+
+@media (max-width: 767px) {
+  .w-100-md-300px {
+    width: 100%; } }
 
 .text-blue {
   color: #1476ff; }
@@ -91,3 +111,6 @@
 
 .color-black {
   color: black; }
+
+.color-red {
+  color: red; }

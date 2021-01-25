@@ -3,3 +3,6 @@
 
 .color-black {
   color: black; }
+
+.color-red {
+  color: red; }

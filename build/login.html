@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Middleman</title>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script type="module" src="../javascripts/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="border bg-light-blue min-height-100vh row mx-0 justify-content-center align-items-center" id="loginPage">
+  <div class="col-12 col-sm-6 col-md-3 bg-white text-center border-radius-10px">
+    <h3 class="mt-4 text-22px">Inscription</h3>
+    <form action="submit" class="d-flex flex-column min-height-400px" id="loginForm">
+      <p id="loginErrorMessage" class="color-red"></p>
+      <label for="email" class="text-14px align-self-start mt-4">Adresse email</label>
+      <input type="text" id="emailInput" placeholder="addresse e-mail" class="text-14px outline-none pl-2 height-40px border-light-grey border-radius-5px">
+      <label for="password" class="text-14px align-self-start mt-4">Mot de passe</label>
+      <input id="passwordInput" type="password"  placeholder="mot de passe" class="text-14px outline-none pl-2 height-40px border-light-grey border-radius-5px">
+      <button class="w-100 cursor-pointer outline-none border-0px mb-0 align-self-center border-radius-25px px-4 py-2 bg-blue-electric text-white mt-4">S'inscrire</button>
+      <hr class="w-100 mt-4">
+    </form>
+  </div>
+</div>
+  </body>
+</html>
