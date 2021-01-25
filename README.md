@@ -3,6 +3,8 @@
 For a company, i had to realize this test, which took me a bit less than 2 days.
 <br>Meet me @ : https://soan-test.herokuapp.com/
 
+I used the frameword Middleman (for the build, run : "middleman build"), and i deployed on Heroku.
+
 ## Code Organization
 ### Views
 
