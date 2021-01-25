@@ -1,3 +1,7 @@
+.bg-black-opacity {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 .bg-light-grey {
   background-color: rgb(241, 240, 241);
 }
@@ -20,6 +24,10 @@
 
 .border-radius-25px {
   border-radius: 25px;
+}
+
+.border-0px {
+  border: 0;
 }
 
 .bottom--18px {
@@ -48,4 +56,8 @@
 
 .line-throught {
   text-decoration: line-through;
+}
+
+.outline-none {
+  outline: none;
 }

@@ -3,7 +3,7 @@ const handleCheckboxChecked = () => {
   const billsIds = [];
   const values = [];
 
-  const handleBtnToDisable = (btn) => {
+  const handleBtnDisable = (btn) => {
     if (values.length > 0) {
       btn.disabled = false;
       btn.classList.add('bg-blue-electric', 'cursor-pointer', 'text-white');
@@ -42,7 +42,7 @@ const handleCheckboxChecked = () => {
     }
   })
   displayTotal(billsIds, values);
-  handleBtnToDisable(document.getElementById('payButton'));
+  handleBtnDisable(document.getElementById('payButton'));
 }
 
 export default handleCheckboxChecked;
