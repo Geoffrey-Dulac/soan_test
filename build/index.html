@@ -8,8 +8,10 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Middleman</title>
     <link href="/stylesheets/site.css" rel="stylesheet" />
-    <script src="/javascripts/site.js"></script>
+    <script type="module" src="../javascripts/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="min-height-100vh line-height-1px">
@@ -21,12 +23,19 @@
     <div class="col-12 col-md-7">
       <h4 class="my-5 ml-5">CIKLEA-PARIS</h4>
       <div>
-        <div class="d-flex">
-          <p class="mr-2">A payer</p>
-          <p>Payé</p>
-        </div>
-        <hr class="w-100 color-black">
-        <div id="billsArea">
+        <ul class="d-flex nav nav-tabs mb-5">
+          <li class="nav-item">
+            <a data-toggle="tab" role="tab" class="mr-2 nav-link active color-black" href="#billsToPayArea" id="topay-tab" aria-controls="topay" aria-selected="true">A payer</a>
+          </li>
+          <li class="nav-item">
+            <a data-toggle="tab" role="tab" href="#payedBillsArea" class="nav-link color-black" id="payed-tab" aria-controls="payed" aria-selected="false">Payé</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" role="tabpanel" id="billsToPayArea" aria-labelledby="topay-tab">
+          </div>
+          <div class="tab-pane" role="tabpanel" id="payedBillsArea" aria-labelledby="payed-tab">
+          </div>
         </div>
       </div>
     </div>
