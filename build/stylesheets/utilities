@@ -1,11 +1,17 @@
 .bg-light-grey {
   background-color: #f1f0f1; }
 
+.bg-light-green {
+  background-color: #38e9c3; }
+
 .bg-blue-electric {
   background-color: #1476ff; }
 
 .border-radius-5px {
   border-radius: 5px; }
+
+.border-radius-10px {
+  border-radius: 10px; }
 
 .border-radius-25px {
   border-radius: 25px; }
