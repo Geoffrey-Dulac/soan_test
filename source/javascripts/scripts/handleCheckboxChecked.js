@@ -16,7 +16,13 @@ const handleCheckboxChecked = () => {
       `
     })
     document.querySelector("#recapInvoicesArea").innerHTML = invoicesIdToInject;
-    document.querySelector("#recapSumArea").innerText = `${formatK(valueInvoices.reduce((a, b) => a + b))} €`;
+    if (valueInvoices.length === 2) {
+      document.querySelector("#recapSumArea").innerText = `${formatK(valueInvoices.reduce((a, b) => a + b))} €`;
+    } else if (valueInvoices.length === 1) {
+      document.querySelector("#recapSumArea").innerText = `${formatK(valueInvoices[0])} €`;
+    } else {
+      document.querySelector("#recapSumArea").innerText = "0 €";
+    }
   }
 
   checkboxes.forEach((checkbox) => {
