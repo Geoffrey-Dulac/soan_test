@@ -49,7 +49,23 @@
           <p>Total</p>
           <p id="recapSumArea">0 €</p>
         </div>
-        <button id="payButton" class="mb-0 align-self-center border-radius-25px px-4 py-2" disabled>Payer par virement</button>
+        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" id="payButton" class="outline-none border-0px mb-0 align-self-center border-radius-25px px-4 py-2" disabled>Payer par virement</button>
+        <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-4" id="modalContentArea">
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button id="validationPaymentBtn" data-dismiss="modal" type="button" class="outline-none border-0px mb-0 border-radius-25px px-4 py-2 cursor-pointer bg-blue-electric text-white">Valider Paiement</button>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>
