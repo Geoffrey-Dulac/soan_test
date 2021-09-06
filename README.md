@@ -1,24 +1,21 @@
-# PAYMENT MODULE
+# CRUD API
 
-For a company, i had to realize this test, which took me a bit less than 2 days.
-<br>Meet me @ : https://soan-test.herokuapp.com/
-
-I used the frameword Middleman (for the build, run : "middleman build"), and i deployed on Heroku.
+For Petal-Health i realized a test. I had to create a basic API for doing basic CRUD actions on a Pokemon list.
 <br>
 <br>
-<i>January 2021</i>
+Meet me @ : 
+- https://petaltest.herokuapp.com/api/v1/pokemons (index : GET request)
+- https://petaltest.herokuapp.com/api/v1/pokemons (create : POST request) => <b>Params expected</b> {name: '', type_1: '', type_2: '', total: 1, hp: 1, attack: 1, defense: 1, sp_atk: 1, sp_def: 1, speed: 1, generation: 1, legendary: true}
+- https://petaltest.herokuapp.com/api/v1/pokemons/:id (update : PUT/PATCH request) => Pass the params you want to change like for create POST request above
+- https://petaltest.herokuapp.com/api/v1/pokemons/:id (destroy : DELETE request)
+- https://petaltest.herokuapp.com/api/v1/paginated_list (paginated_list : POST request) => <b>Params expected</b> {per_page: '', page: ''}
 
-## Code Organization
-### Views
 
-There are two pages : Index.html.erb ("home page") and login.html.erb ("login page"). And 2 partials : Footer.html.erb and Modal.html.erb (Modal for validation payment).
-
-### Styles
-
-As mush as possible, i used bootstrap classes. And when it was not possible, i created specific classes, working as utilities. To make sure to reuse it instead of make duplicates.
-For the modal and tabs, i used bootstrap to earn a bit of time.
-
-### Javascript
-
-I use to code in Javascrip (and whithout POO) for a few days/weeks only, so i'am not happy yet of my code Js organization. I tried to keep a quite clear "main function" which call other scripts. And that's why i would say this is not that catastrophic cause i reused few functions and i didn't write duplicate code.   
+### Unit tests
+I used Rspec to realize unit tests and make those routes safer (factory_bot_rails gem was added to fake data).
+To run test, just run 'rspec' in your terminal.
+<br>
+<br>
+<i>September 2021</i>
+  
 
